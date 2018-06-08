@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02001946-F566-4706-8C2D-44B2BADE66F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProductPrice.Abstractions</RootNamespace>
+    <AssemblyName>ProductPrice.Abstractions</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\StatusCodeAttribute.cs" />
+    <Compile Include="Configuration\IAccessTokenConfiguration.cs" />
+    <Compile Include="Contracts\Commands\AddPriceCommand.cs" />
+    <Compile Include="Contracts\Commands\Authorization\SetRefreshTokenCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Color\AddColorCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Image\AddImageUrlCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Localization\AddLocalizedStringsCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Localization\AddOrUpdateLocalizedStringsCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Color\RemoveColorCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Image\RemoveImageUrlCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Localization\RemoveLocalizedStringCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Color\UpdateColorCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Image\UpdateImageUrlCommand.cs" />
+    <Compile Include="Contracts\Commands\Content\Localization\UpdateLocalizaedStringCommand.cs" />
+    <Compile Include="Contracts\Commands\CreateAdditionalFactorsCommand.cs" />
+    <Compile Include="Contracts\Commands\CreateProductCommand.cs" />
+    <Compile Include="Contracts\Commands\CustomProperties\CreateCustomPropertyCommand.cs" />
+    <Compile Include="Contracts\Commands\CustomProperties\DeleteCustomPropertyCommand.cs" />
+    <Compile Include="Contracts\Commands\CustomProperties\UpdateCustomPropertyCommand.cs" />
+    <Compile Include="Contracts\Commands\DeleteAdditionalFactorsCommand.cs" />
+    <Compile Include="Contracts\Commands\DeletePriceCommand.cs" />
+    <Compile Include="Contracts\Commands\DeleteProductCommand.cs" />
+    <Compile Include="Contracts\Commands\RegisterNewUserCommand.cs" />
+    <Compile Include="Contracts\Commands\UpdateAdditionalFactorsCommand.cs" />
+    <Compile Include="Contracts\Commands\UpdatePriceCommand.cs" />
+    <Compile Include="Contracts\Commands\UpdateProductCommand.cs" />
+    <Compile Include="Contracts\Queries\AllPricesResponse.cs" />
+    <Compile Include="Contracts\Queries\AllProductsResponse.cs" />
+    <Compile Include="Contracts\Queries\Authorization\UserRefreshTokenQuery.cs" />
+    <Compile Include="Contracts\Queries\Authorization\UserRefreshTokenResponse.cs" />
+    <Compile Include="Contracts\Queries\BoxingsQuery.cs" />
+    <Compile Include="Contracts\Queries\BoxingsResponse.cs" />
+    <Compile Include="Contracts\Queries\Calculations\CalculatedPriceRangeResponse.cs" />
+    <Compile Include="Contracts\Queries\Calculations\CalculatedPriceResponse.cs" />
+    <Compile Include="Contracts\Queries\Calculations\GetCalculatedPriceRangeQuery.cs" />
+    <Compile Include="Contracts\Queries\Content\LocalizationObjectQuery.cs" />
+    <Compile Include="Contracts\Queries\Content\LocalizationObjectResponse.cs" />
+    <Compile Include="Contracts\Queries\Content\LocalizedValuesQuery.cs" />
+    <Compile Include="Contracts\Queries\Content\LocalizedValuesResponse .cs" />
+    <Compile Include="Contracts\Queries\CustomPropertiesQuery.cs" />
+    <Compile Include="Contracts\Queries\EnvironmentsQuery.cs" />
+    <Compile Include="Contracts\Queries\EnvironmentsResponse.cs" />
+    <Compile Include="Contracts\Queries\GetAllPricesQuery.cs" />
+    <Compile Include="Contracts\Queries\GetAllProductsQuery.cs" />
+    <Compile Include="Contracts\Queries\Calculations\GetCalculatedPriceQuery.cs" />
+    <Compile Include="Contracts\Queries\Login\UserIdByCredentialsQuery.cs" />
+    <Compile Include="Contracts\Queries\Login\UserIdByCredentialsResponse.cs" />
+    <Compile Include="Contracts\Queries\ProductsWithPricesQuery.cs" />
+    <Compile Include="Contracts\Queries\ProductsWithPricesResponse.cs" />
+    <Compile Include="Contracts\Queries\ShippingsQuery.cs" />
+    <Compile Include="Contracts\Queries\ShippingsResponse.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\Boxing.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\Environment.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\Product.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\ProductPrice.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\Shipping.cs" />
+    <Compile Include="Contracts\Queries\SubResponses\Tax.cs" />
+    <Compile Include="Contracts\Queries\TaxesQuery.cs" />
+    <Compile Include="Contracts\Queries\TaxesResponse.cs" />
+    <Compile Include="CQRS\Buses\ICommandBus.cs" />
+    <Compile Include="CQRS\Buses\IQueryBus.cs" />
+    <Compile Include="CQRS\DataBase\EntityBase.cs" />
+    <Compile Include="CQRS\DataBase\IDbContext.cs" />
+    <Compile Include="CQRS\Handlers\ICommandHandler.cs" />
+    <Compile Include="CQRS\Handlers\IQueryHandler.cs" />
+    <Compile Include="CQRS\ICommand.cs" />
+    <Compile Include="CQRS\IQuery.cs" />
+    <Compile Include="CQRS\IQueryResult.cs" />
+    <Compile Include="Exceptions\Authorization\AccessTokenExpiredException.cs" />
+    <Compile Include="Exceptions\Authorization\AccessTokenVerificationException.cs" />
+    <Compile Include="Exceptions\Authorization\AuthorizationRequiredException.cs" />
+    <Compile Include="Exceptions\Authorization\UserNotAuthorizedException.cs" />
+    <Compile Include="Exceptions\Codes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Codes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\ProductPriceExceptionBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IRandomStringGenerationService.cs" />
+    <Compile Include="Services\Security\AccessToken\IAccessTokenService.cs" />
+    <Compile Include="Services\Security\AccessToken\Payload.cs" />
+    <Compile Include="Services\Security\IExpirableTokenGenerationService.cs" />
+    <Compile Include="Services\Security\ISha512Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Exceptions\Codes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Codes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exceptions\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

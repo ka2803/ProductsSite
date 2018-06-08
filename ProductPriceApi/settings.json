@@ -1,0 +1,9 @@
+﻿{
+  "RedisConfiguration": {
+    "ConnectionString": "localhost"
+  },
+  "AccessTokenConfiguration": {
+    "SecretKe": "8e6gZGgTCCJsNvgj1kDC",
+    "Lifetime": "1000:00:00" 
+  } 
+}
